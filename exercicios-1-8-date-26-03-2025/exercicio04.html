@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio04</title>
+</head>
+<body>
+    <input type="number" name="number-one" id="number-one" placeholder="Digite um valor"><br>
+    <input type="number" name="number-two" id="number-two" placeholder="Digite um valor">
+    <button onclick="soma()">Soma</button>
+    <script>
+        "use strict"
+    function soma(){
+        let numberone = document.getElementById("number-one").value
+        let numbertwo = document.getElementById("number-two").value
+        let resposta = Number(numberone) + Number(numbertwo)
+        alert(`A soma entre ${numberone} e ${numbertwo} é igual a ${resposta}.`)
+    }
+    </script>
+</body>
+</html>

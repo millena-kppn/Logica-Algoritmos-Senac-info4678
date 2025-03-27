@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio06</title>
+</head>
+<body>
+    <input type="number" name="numero" id="number">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let number = document.getElementById("number").value
+            alert(`O antecessor de ${number} é ${number-1} O sucessor de ${number} é ${Number(number) + Number(1)}`)
+        }
+    </script>
+</body>
+</html>

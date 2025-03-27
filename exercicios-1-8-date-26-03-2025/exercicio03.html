@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio03</title>
+</head>
+<body>
+    <input type="text" name="name" id="name" placeholder="Digite seu nome...">
+    <input type="text" name="salario" id="salario" placeholder="Digite seu salário...">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let name = document.getElementById("name").value
+        let salario = document.getElementById("salario").value
+        alert(`O funcionário ${name} tem um salário de R$${salario} em Junho.`)
+    }
+    </script>
+</body>
+</html>
