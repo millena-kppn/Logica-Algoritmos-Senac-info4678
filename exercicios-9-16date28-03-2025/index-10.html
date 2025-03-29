@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio10</title>
+</head>
+<body>
+    <input type="number" name="largura" id="largura">
+    <input type="number" name="altura" id="altura">
+    <button onclick="parede()">Calcular</button>
+    <script>
+        "use strict"
+        function parede(){
+            let largura = document.getElementById("largura").value
+            let altura = document.getElementById("altura").value
+            let resultadoParede = largura * altura
+            let tinta = resultadoParede / 2
+            alert(`${resultadoParede} ${tinta}`)
+        }
+        // TERMINAR ATIVIDADE
+    </script>
+</body>
+</html>

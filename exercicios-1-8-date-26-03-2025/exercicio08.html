@@ -6,9 +6,20 @@
     <title>Exercicio08</title>
 </head>
 <body>
+    <input type="number" name="valor" id="valor" placeholder="Digite sua diatancia...">
+    <button onclick="resultado()">Resultado</button>
     <script>
         "use strict"
-        
+        function resultado(){
+            let resultado = document.getElementById("valor").value
+            let km = resultado / 10
+            let hm = resultado / 10
+            let dam = resultado / 10
+            let dm = resultado * 10
+            let cm = resultado * 10
+            let mm = resultado * 10
+            alert(`A distância de ${resultado} corresponde a:${km}km, ${hm}hm, ${dam}dam, ${dm}dm, ${cm}cm e ${mm}mm`)
+        }
     </script>
 </body>
 </html>

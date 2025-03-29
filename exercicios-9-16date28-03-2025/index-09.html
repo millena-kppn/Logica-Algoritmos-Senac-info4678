@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio09</title>
+</head>
+<body>
+    <input type="number" name="dinheiro" id="dinheiro" placeholder="Quanto dinheiro possui?">
+    <button onclick="quantia()">Calcular</button>
+    <script>
+        "use strict"
+    function quantia(){
+        let real = document.getElementById("dinheiro").value
+        let dolar = real / 5.76
+        let dolarAbreviado = parseFloat(dolar.toFixed(2));
+        alert(`Você pode comprar ${dolarAbreviado}`)
+    }
+    </script>
+</body>
+</html>
