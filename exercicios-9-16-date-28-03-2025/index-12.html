@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio12</title>
+</head>
+<body>
+   <input type="number" name="produto-preco" id="produtoPreco" placeholder="Digite o valor...">
+   <button onclick="resultado()">Resultado</button>
+   <script>
+      "use strict"
+   function resultado(){
+      let produtoPreco = document.getElementById("produtoPreco").value
+      let desconto = produtoPreco * 0.05
+      let valorPromocional = Number(produtoPreco).toFixed(2) - Number(desconto).toFixed(2)
+      alert(`O desconto de 5% equivale a: ${valorPromocional}`)
+   }
+   </script>
+</body>
+</html>
