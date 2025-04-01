@@ -12,10 +12,10 @@
       "use strict"
    function resultado(){
       let salario = document.getElementById("salario").value
-      let aumento =  salario + (salario/100*15)
-      alert(`Seu novo salário será de: ${aumento}`)
+      let aumento =  salario * 0.15
+      let novoSalario = Number(salario) + Number(aumento)
+      alert(`Seu novo salário com o aumento de 15% será de: ${novoSalario}`)
    }
-   // TERMINAR
    </script>
 </body>
 </html>

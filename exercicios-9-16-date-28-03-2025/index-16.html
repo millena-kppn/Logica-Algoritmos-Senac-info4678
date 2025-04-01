@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio15</title>
+</head>
+<body>
+    <input type="number" name="cigarros" id="cigarros" placeholder="Cigarros fumados">
+    <input type="number" name="anos" id="anos" placeholder="Anos fumados">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let cigarros = document.getElementById("cigarros").value
+        let anos = document.getElementById("anos").value
+        let desperdicioVida = cigarros * 10
+        let tempoVidaMinutos = desperdicioVida * anos //min
+        let tempoVidaDia = tempoVidaMinutos / 1.440
+        alert(`Você perderá ${tempoVidaDia.toFixed(3)} dias de vida`)
+    }    
+    </script>
+</body>
+</html>
