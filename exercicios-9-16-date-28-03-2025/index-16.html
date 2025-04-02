@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio15</title>
+    <title>Exercicio16</title>
+    <input type="number" name="cigarros" id="cigarros" placeholder="Quantos você fuma?">
+    <input type="number" name="anos" id="anos" placeholder="Por quantos anos?">
+    <button onclick="resultado()">Resultado</button>
 </head>
 <body>
-    <input type="number" name="cigarros" id="cigarros" placeholder="Cigarros fumados">
-    <input type="number" name="anos" id="anos" placeholder="Anos fumados">
-    <button onclick="resultado()">Resultado</button>
     <script>
         "use strict"
     function resultado(){
-        let cigarros = document.getElementById("cigarros").value // 6
-        let anos = document.getElementById("anos").value
-        let desperdicioVida = cigarros * 10 // min/dia 60/dia
-        let tempoVidaMinutos = desperdicioVida / anos //min
-        let tempoVidaDiaminutos = tempoVidaMinutos / 1.440
-        let diasperdidos = tempoVidaDiaminutos / 365
-        alert(`Você perderá ${diasperdidos.toFixed(3)} dias de vida`)
-    }    
+    let cigarros = document.getElementById("cigarros").value
+    let anos = document.getElementById("anos").value
+    let tempoPerdidoFumando = cigarros * (1440 / 10)
+    let anosFumando = anos * 365
+    let diasPerdidos = anosFumando / tempoPerdidoFumando
+
+    alert(`Você perdeu ${diasPerdidos.toFixed(2)} dias fumando.`)  
+}
     </script>
 </body>
 </html>
