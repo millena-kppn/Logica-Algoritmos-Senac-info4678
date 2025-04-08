@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <input type="number" name="velocidade" id="velocidade">
+    <button onclick="resposta()">Resposta</button>
+    <script>
+     "use strict"
+    function resposta(){
+        let velocidade = document.getElementById("velocidade").value
+        if(velocidade > 80){
+            let valorMulta = (velocidade - 80) * 5
+            alert(`Você foi multado! Valor a pagar: R$${valorMulta.toFixed(2)}`)
+        }else{
+            alert("Parabéns, você está dentro do limite de velocidade permitido.")
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio018</title>
+</head>
+<body>
+    <input type="number" name="idade" id="idade" placeholder="Seu ano de nacsimento">
+    <button onclick="resposta()">Resposta</button>
+    <script>
+        "use strict"
+    function resposta(){
+        let idade = document.getElementById("idade").value 
+        let valorIdade = 2025 - idade 
+        if(valorIdade > 16){
+        alert(`Você já possui ${valorIdade} anos, pode exercer seu direito de cidadão.`)
+        }else{
+            alert("Você não possui idade para votar.")
+        }
+    }
+    </script>
+</body>
+</html>
