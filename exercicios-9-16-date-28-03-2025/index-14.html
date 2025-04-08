@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio14</title>
+</head>
+<body>
+    <input type="number" name="dias" id="dias" placeholder="Informe os dias de uso">
+    <input type="number" name="km" id="km" placeholder="Informe o Km">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+       "use strict"
+    function resultado(){
+        let dias = document.getElementById("dias").value
+        let km = document.getElementById("km").value
+        let totalDias = dias *  90
+        let totalKm = km * 0.20
+        let valorPagar = Number(totalDias) + Number(totalKm)
+        alert(`O total do custo do carro alugado resulta em: R$${valorPagar.toFixed(2)}`)
+    }   
+    </script>
+</body>
+</html>

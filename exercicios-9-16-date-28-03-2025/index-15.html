@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio15</title>
+</head>
+<body>
+    <input type="number" name="diasTrabalhados" id="diasTrabalahados" placeholder="Informe os dias">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let diasTrabalahados = document.getElementById("diasTrabalahados").value
+        let pagamentoDia = 25 * 8
+        let valorReceber = Number(diasTrabalahados) * Number(pagamentoDia)
+        alert(`Você irá receber R$${valorReceber.toFixed(2)} por dias trabalhados`)
+    }
+    </script>
+</body>
+</html>

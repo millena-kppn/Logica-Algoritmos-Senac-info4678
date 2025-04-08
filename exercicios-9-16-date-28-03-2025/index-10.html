@@ -6,19 +6,19 @@
     <title>Exercicio10</title>
 </head>
 <body>
-    <input type="number" name="largura" id="largura">
-    <input type="number" name="altura" id="altura">
+    <input type="number" name="largura" id="largura" placeholder="Largura da parede">
+    <input type="number" name="altura" id="altura" placeholder="Altura da parede">
     <button onclick="parede()">Calcular</button>
     <script>
         "use strict"
         function parede(){
             let largura = document.getElementById("largura").value
             let altura = document.getElementById("altura").value
-            let resultadoParede = largura * altura
+            let calculo = largura * altura
+            let resultadoParede =  parseFloat(calculo.toFixed(2))
             let tinta = resultadoParede / 2
-            alert(`${resultadoParede} ${tinta}`)
+            alert(`Ao todo você possui uma área de ${resultadoParede} metros quadrados, necessita de ${tinta} litros de tinta`)
         }
-        // TERMINAR ATIVIDADE
     </script>
 </body>
 </html>
