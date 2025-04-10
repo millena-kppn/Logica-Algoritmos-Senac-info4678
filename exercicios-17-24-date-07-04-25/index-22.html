@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio022</title>
+</head>
+<body>
+    <input type="number" name="nascimento" id="nascimento">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let nascimento = document.getElementById("nascimento").value 
+        let idade = 2025 - Number(nascimento)
+        let passaram = Number(idade) - 18
+        let faltam = 18 - Number(idade)
+        if (idade === 18 ){
+        alert(`Você nasceu em ${nascimento}, está na idade do alistamento.`)
+    }else if(idade > 18){
+            alert(`Você nasceu em ${nascimento}, já passaram ${passaram} anos de seu alistamento.`)
+
+        }else{
+            alert(`Você nasceu em ${nascimento}, faltam ${faltam} anos de seu alistamento.`)
+        }
+    }
+    </script>
+</body>
+</html>
