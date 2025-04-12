@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio024</title>
+</head>
+<body>
+    <input type="number" name="km" id="km" placeholder="Informe o Km percorrido!">
+    <button onclick="calcular()">Calcular</button>
+    <script>
+        "use strict"
+    function calcular(){
+        let km = document.getElementById("km").value
+        let kmDuzentos = km * 0.50
+        let kmMaisDuzentos = km * 0.45 
+        if (km <= 200){
+         alert(`Seu valor da passagem é R$${kmDuzentos.toFixed(2)}`)
+        }else{
+            alert(`Seu valor da passagem é R$${kmMaisDuzentos.toFixed(2)}`)
+        }
+    }
+    </script>
+</body>
+</html>

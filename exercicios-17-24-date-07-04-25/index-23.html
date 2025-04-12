@@ -5,19 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio023</title>
 </head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: rgba(76, 129, 254, 0.984);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h2{
+        margin-top: 10px;
+        color: rgb(31, 55, 95);
+        font-size: 0.9em;
+    }
+    input{
+        margin-top: 10px;
+    }
+    #seletorSexo{
+        width: 350px;
+        height: 260px;
+        background-color: rgb(186, 186, 255);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    #nome, #feminino, #masculino{
+        text-align: center;
+        margin: 10px;
+        color: rgb(0, 98, 255);
+    }
+    button{
+        padding: 1px;
+        width: 80px;
+        color: rgb(0, 98, 255);
+    }
+    </style>
 <body>
-    <div id="feminino">
-        <input type="radio" name="feminino" >
-        <label for="feminino"> Feminino</label>
+    <div id="seletorSexo">
+        <h2>Qual seu nome?</h2>
+        <input type="text" name="nome" id="nome" placeholder="Seu nome aqui...">
+        <h2>Informe seu sexo:</h2>
+        <div id="feminino">
+            <input type="radio" name="selecionar" id="input_feminino" value="F">
+            <label for="feminino">Feminino</label>
+        </div>
+        <div id="masculino">
+            <input type="radio" name="selecionar" id="input_masculino" value="M"> 
+            <label for="masculino">Masculino</label>
+        </div>
+        <h2>Informe o total da compra:</h2>
+        <input type="number" name="valor" id="valor" placeholder="Digite o valor...">
+        <button onclick="cliqueAqui()">Desconto</button>
     </div>
-<div id="masculino">
-    <input type="radio" name="masculino" > 
-    <label for="masculino">Masculino</label>
-</div>
-<button onclick="sexo">Sexo</button>
     <script>
         "use strict"
-
+        function cliqueAqui(){
+            let nome = document.getElementById("nome").value
+            let valor = document.getElementById("valor").value
+            let feminino = document.getElementById("input_feminino").checked;
+            let masculino = document.getElementById("input_masculino").checked;
+            let descontoMulher = valor - (valor * 13) / 100
+            let descontoHomen = valor - (valor * 5) / 100 
+            if (!(feminino =! masculino)){ // se le: Não é diferente
+                alert(`${nome}! Sua compra irá sair por R$${descontoHomen.toFixed(2)} `)
+            }else{
+                alert(`${nome}! Sua compra irá sair por R$${descontoMulher.toFixed(2)} `)
+            }
+        }
     </script>
 </body>
 </html>

@@ -13,10 +13,10 @@
     function resultado(){
         let ano = document.getElementById("ano").value 
         let anoBis = Number(ano) / 400 //var dar erro com o valor 100 achar outra forma 
-        if(anoBis == anoBis.toFixed(3)){
+        if(anoBis.toFixed(3) == anoBis){ 
         alert(`O ano ${ano} é Bissexto!`)
     }else{
-            alert(`O ano ${ano} não é Bissexto!`)
+        alert(`O ano ${ano} não é Bissexto!`)
         }
     }
     </script>
