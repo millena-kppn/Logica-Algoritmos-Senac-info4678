@@ -6,8 +6,22 @@
     <title>Exercicio025</title>
 </head>
 <body>
+    <input type="number" name="numberOn" id="numberOn">
+    <input type="number" name="numberTwo" id="numberTwo">
+    <input type="number" name="numberThree" id="numberThree">
+    <button onclick="calcular()">Carcular</button>
     <script>
         "use strict"
+    function calcular(){
+        let numberOn = document.getElementById("numberOn").value 
+        let numberTwo = document.getElementById("numberTwo").value
+        let numberTthree = document.getElementById("numberThree").value 
+        if (numberOn < (numberOn + numberTwo) && numberTwo < (numberOn + numberTthree) && numberTthree < (numberTwo + numberTthree)){ //para deixar o codigo limpo...
+        alert("É possivel formar um triângulo")
+    }else{
+        alert("Não é possivel formar um triângulo")
+        }
+    }
     </script>
 </body>
 </html>
