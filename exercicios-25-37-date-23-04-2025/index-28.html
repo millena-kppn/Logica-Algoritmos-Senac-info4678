@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio028</title>
+</head>
+<body>
+    <input type="number" name="largura" id="largura" placeholder="Largura">
+    <input type="number" name="comprimento" id="comprimento" placeholder="comprimento">
+    <button onclick="resultado()">Resultado</button>
+    <script>
+        "use strict"
+    function resultado(){
+        let largura = document.getElementById("largura").value 
+        let comprimento = document.getElementById("comprimento").value
+        let M_quadrado = Number(largura) + Number(comprimento)
+        if (M_quadrado < 100){
+            alert("TERRENO POPULAR")
+        }else if(M_quadrado >= 100 && M_quadrado <= 500){
+            alert("TERRENO MASTER ")
+        }else{
+            alert("TERRENO VIP ")
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio026</title>
+</head>
+<body>
+    <input type="number" name="numberOn" id="numberOn" placeholder="First value">
+    <input type="number" name="numberTwo" id="numberTwo" placeholder="Second value">
+    <button onclick="verificar()">Verificar</button>
+    <script>
+        "use strict"
+        function verificar(){
+        let numberOn = parseInt(document.getElementById("numberOn").value )
+        let numberTwo = parseInt(document.getElementById("numberTwo").value)
+        if(numberOn > numberTwo){
+            alert("O primeiro valor é maior")
+        }else if(numberOn < numberTwo){
+                alert("O segundo valor é maior")
+        }else{
+            alert("Não existe valor maior, os dois são iguais ")}
+        }
+    </script>
+</body>
+</html>
