@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio032</title>
+</head>
+<body>
+   <h2>Descubra o número que o computador irá sortear.</h2>
+   <input type="number" name="opcaoJogador" id="opcaoJogador" placeholder="Digite aqui!">
+   <button onclick="resultado()">Resultado</button>
+   <script>
+      "use strict"
+      function resultado(){
+         let opcaoJogador = document.getElementById("opcaoJogador").value 
+         const opcaoComputador = [1,2,4,5]
+         const computadorSorteiaUmNumero = opcaoComputador[Math.floor(Math.random() * 3)] + 1 
+         if(opcaoJogador != computadorSorteiaUmNumero){
+            alert(`Você errou! O computador escolheu ${computadorSorteiaUmNumero}`)
+         }else{
+            alert(`Você acertou! O computador escolheu ${computadorSorteiaUmNumero}`)
+         }
+      }
+   </script>
+</body>
+</html>
