@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio033</title>
+</head>
+<body>
+   <h2>Empréstimo Bancário</h2>
+   <input type="number" name="valorCasa" id="valorCasa" placeholder="Valor do imovel, aqui!">
+   <input type="number" name="salarioComprador" id="salarioComprador" placeholder="Seu salário aqui!">
+   <input type="number" name="anosParaQuitar" id="anosParaQuitar" placeholder="Anos que pretende quitar, aqui!">
+   <button onclick="resposta()">Resposta</button>
+   <script>
+      "use strict"
+   function resposta(){
+      let valorCasa = document.getElementById("valorCasa").value 
+      let salarioComprador = document.getElementById("salarioComprador").value
+      let anosParaQuitar = document.getElementById("anosParaQuitar").value
+      let prestacaoApagar = Number(valorCasa) / (Number(anosParaQuitar) * 12)
+      if(prestacaoApagar < salarioComprador * 0.3){
+         alert(`Seu empréstimo será aprovado! Sua prestação irá sair por volta de ${prestacaoApagar}.`)
+      }else{
+         alert(`Seu empréstimo está negado! seu limite mensal é por volta de ${prestacaoApagar}`)
+      }
+   }
+   </script>
+</body>
+</html>
