@@ -16,20 +16,15 @@
             let nome = document.getElementById("nome").value 
             let salarioAtual = document.getElementById("salarioAtual").value
             let anosTrabalhado = document.getElementById("anosTrabalhado").value
-            let salarioAtualMaisPorcentagemPrimeiroCalculo = 3
-            let salarioAtualMaisPorcentagemSegundoCalculo = 12.5
-            let salarioAtualMaisPorcentagemTerceiroCalculo = 20
+            let salarioAtualMaisPorcentagemPrimeiroCalculo = (Number(salarioAtual) * 0.03) + Number(salarioAtual)
+            let salarioAtualMaisPorcentagemSegundoCalculo = (Number(salarioAtual) * 0.125) + Number(salarioAtual)
+            let salarioAtualMaisPorcentagemTerceiroCalculo = (Number(salarioAtual) * 0.20) + Number(salarioAtual)
             if (anosTrabalhado <= 3){
-                salarioAtualMaisPorcentagemPrimeiroCalculo = (Number(salarioAtual) * 0.03) + Number(salarioAtual)
                 alert(`${nome}! Em ${anosTrabalhado} anos de trabalho seu salário passará por um aumento de 3%, você vai receber agora R$ ${salarioAtualMaisPorcentagemPrimeiroCalculo.toFixed(2)}`)
             }else if(anosTrabalhado >= 3 && anosTrabalhado <= 10){
-                salarioAtualMaisPorcentagemSegundoCalculo = (Number(salarioAtual) * 0.125) + Number(salarioAtual)
-
                 alert(`${nome}! Em ${anosTrabalhado} anos de trabalho seu salário passará por um aumento de 12.5%, você vai receber agora R$ ${salarioAtualMaisPorcentagemSegundoCalculo.toFixed(2)}`)
             }else{
-                salarioAtualMaisPorcentagemTerceiroCalculo = (Number(salarioAtual) * 0.20) + Number(salarioAtual)
                 alert(`${nome}! Em ${anosTrabalhado} anos de trabalho seu salário passará por um aumento de 20%, você vai receber agora R$ ${salarioAtualMaisPorcentagemTerceiroCalculo.toFixed(2)}`)
-
             }
         }
     </script>
