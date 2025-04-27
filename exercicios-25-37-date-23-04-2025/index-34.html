@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio034</title>
+</head>
+<body>
+   <h2>Vamos calcular seu Índice de massa Corporal</h2>
+   <input type="number" name="altura" id="altura" placeholder="Informe sua altura">
+   <input type="number" name="peso" id="peso" placeholder="Informe seu peso (Kg)">
+   <button onclick="resultado()">Resultado</button>
+   <script>
+      "use strict"
+   function resultado(){
+      let altura = document.getElementById("altura").value 
+      let peso = document.getElementById("peso").value
+      let imc = (peso / (altura**2)).toFixed(1)
+       if (imc < 18.5){
+          alert(`Seu IMC deu ${imc}, abaixo de 18.5, você está abaixo do peso .`)
+       }else if(imc >= 18.5 && imc < 25){
+          alert(`Seu IMC deu ${imc}, está entre 18.5 e 25, você está no peso ideal.`)
+       } else if(imc >= 25 && imc <= 30){
+          alert(`Seu IMC deu ${imc}, está entre 25 e 30, você está no Sobrepeso.`)
+       }else if(imc > 30 && imc <= 40){
+          alert(`Seu IMC deu ${imc}, está entre 30 e 40, você está na Obesidade.`)
+       }else{
+          alert(`Seu IMC deu ${imc}, está acima de 40, você está com Obseidade mórbida.`)
+       }
+   }
+   </script>
+</body>
+</html>

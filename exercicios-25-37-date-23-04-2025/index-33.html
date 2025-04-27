@@ -7,23 +7,24 @@
 </head>
 <body>
    <h2>Empréstimo Bancário</h2>
-   <input type="number" name="valorCasa" id="valorCasa" placeholder="Valor do imovel, aqui!">
-   <input type="number" name="salarioComprador" id="salarioComprador" placeholder="Seu salário aqui!">
-   <input type="number" name="anosParaQuitar" id="anosParaQuitar" placeholder="Anos que pretende quitar, aqui!">
-   <button onclick="resposta()">Resposta</button>
-   <script>
+    <input type="number" name="valorImovel" id="valorImovel" placeholder="Digite o valor do imovel">
+    <input type="number" name="salarioComprador" id="salarioComprador" placeholder="Digite seu salário">
+    <input type="number" name="anosParaQuitarEmprestimo" id="anosParaQuitarEmprestimo" placeholder="Em quantos anos pretende quitar?">
+    <button onclick="aprovacaoEmprestimo()">Aprovação Emprestimo</button>
+    <script>
       "use strict"
-   function resposta(){
-      let valorCasa = document.getElementById("valorCasa").value 
-      let salarioComprador = document.getElementById("salarioComprador").value
-      let anosParaQuitar = document.getElementById("anosParaQuitar").value
-      let prestacaoApagar = Number(valorCasa) / (Number(anosParaQuitar) * 12)
-      if(prestacaoApagar < salarioComprador * 0.3){
-         alert(`Seu empréstimo será aprovado! Sua prestação irá sair por volta de ${prestacaoApagar}.`)
-      }else{
-         alert(`Seu empréstimo está negado! seu limite mensal é por volta de ${prestacaoApagar}`)
+      function aprovacaoEmprestimo(){
+         let valorImovel = document.getElementById("valorImovel").value 
+         let salarioComprador = document.getElementById("salarioComprador").value
+         let anosParaQuitarEmprestimo = document.getElementById("anosParaQuitarEmprestimo").value 
+         let meuLimiteMensalParaPagar = salarioComprador * 0.30
+         let valorMensalQuitacao = valorImovel / (anosParaQuitarEmprestimo * 12)
+         if(meuLimiteMensalParaPagar > valorMensalQuitacao){
+            alert("Aprovado!")
+         }else{
+            alert("Negado!")
+         }
       }
-   }
-   </script>
+    </script>
 </body>
 </html>
