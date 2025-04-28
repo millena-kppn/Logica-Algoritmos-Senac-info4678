@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio035</title>
+</head>
+<body>
+   <style>
+      body{
+         font-family: Arial, Helvetica, sans-serif;
+      }
+   </style>
+   <h2>Você tem duas opções de aluguel de carros, carro de luxo e popular.</h2>
+   <p>Escolha: luxo</p>
+   <p>Escolha: popular</p>
+   <input type="text" id="tipoDeCarro" placeholder="Tipo de carro, digite aqui!">
+   <input type="number" name="" id="diasUsados" placeholder="Dias usados...">
+   <input type="number" name="" id="kmPercorrido" placeholder="Km percorrido...">
+   <button onclick="resposta()">Resposta</button>
+  <script>
+   "use strict"
+   function resposta(){
+      let tipoDeCarro = document.getElementById("tipoDeCarro").value 
+      let diasUsados = document.getElementById("diasUsados").value
+      let kmPercorrido = document.getElementById("kmPercorrido").value
+      if(tipoDeCarro == "popular" && kmPercorrido <= 100){
+         let carroPopularAteCemKm = (diasUsados * 90) + (kmPercorrido * 0.20)
+         alert(`Total do carro popular até 100Km: R$ ${carroPopularAteCemKm.toFixed(2)}`)
+      }else if(tipoDeCarro == "popular" && kmPercorrido > 100){
+         let carroPopularAcimaDeCemKm = (diasUsados * 90) + (kmPercorrido * 0.10)
+         alert(`Total do carro popular acima de 100Km: R$ ${carroPopularAcimaDeCemKm.toFixed(2)}`)
+      }else if(tipoDeCarro == "luxo" && kmPercorrido <= 200){
+         let carroDeLuxoAteDuzentosKm = (diasUsados * 150) + (kmPercorrido * 0.30)
+         alert(`Total do carro de luxo até 200Km: R$ ${carroDeLuxoAteDuzentosKm.toFixed(2)}`)
+      }else if(tipoDeCarro == "luxo" && kmPercorrido > 200){
+         let carroDeLuxoAcimaDeDuzentosKm = (diasUsados * 150) + (kmPercorrido * 0.25)
+         alert(`Total do carro de luxo acima de 200Km: R$ ${carroDeLuxoAcimaDeDuzentosKm.toFixed(2)}`)
+      }else{
+         alert("Não identificado!")
+   }
+}
+  </script>
+</body>
+</html>
