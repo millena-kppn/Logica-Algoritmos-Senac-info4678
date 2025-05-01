@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio037</title>
+</head>
+<body>
+    <input type="number" name="salarioAtual" id="salarioAtual" placeholder="Digite seu salário...">
+    <input type="text" name="genero" id="genero" placeholder="Informe seu genêro...">
+    <input type="number" name="anosTrabalhados" id="anosTrabalhados" placeholder="anosTrabalhados">
+    <button onclick="resposta()">Resposta</button>
+    <script>
+        "use strict"
+        function resposta(){
+            let salarioAtual = document.getElementById("salarioAtual").value 
+            let genero = document.getElementById("genero").value
+            let anosTrabalhados = document.getElementById("anosTrabalhados").value
+            if(genero == "feminino" && anosTrabalhados < 15){
+                let novoSalarioMenosDe15AnosDeTrabalho = (Number(salarioAtual) * 0.05) + Number(salarioAtual) 
+                alert(`Seu novo salário é de R$ ${novoSalarioMenosDe15AnosDeTrabalho.toFixed(2)}`)
+            }else if(genero == "feminino" && anosTrabalhados >= 15 && anosTrabalhados <= 20){
+                let novoSalarioEntre15E20AnosDeTrabalho = (Number(salarioAtual) * 0.12) + Number(salarioAtual)
+                alert(`Seu novo salário é de R$ ${novoSalarioEntre15E20AnosDeTrabalho.toFixed(2)}`)
+            }else if(genero == "feminino" && anosTrabalhados > 20){
+                let novoSalarioAcimaDe20AnosDeTrabalho = (Number(salarioAtual) * 0.23) + Number(salarioAtual)
+                alert(`Seu novo salário é de R$ ${novoSalarioAcimaDe20AnosDeTrabalho.toFixed(2)}`)
+            }else if(genero == "masculino" && anosTrabalhados < 20 ){
+                let novoSalarioMenorDe20AnosDeTrabalho = (Number(salarioAtual) * 0.03) + Number(salarioAtual)
+                alert(`Seu novo salário é de R$ ${novoSalarioMenorDe20AnosDeTrabalho.toFixed(2)}`)
+            }else if(genero == "masculino" && anosTrabalhados >= 20 && anosTrabalhados <= 30){
+                let novoSalarioEntre20E30AnosDeTrabalho = (Number(salarioAtual) * 0.13) + Number(salarioAtual)
+                alert(`Seu novo salário é de R$ ${novoSalarioEntre20E30AnosDeTrabalho.toFixed(2)}`)
+            }else if(genero == "masculino" &&  anosTrabalhados > 30){
+                let novoSalarioAcimaDe30AnosDeTrabalho = (Number(salarioAtual) * 0.25) + Number(salarioAtual)
+                alert(`Seu novo salário é de R$ ${novoSalarioAcimaDe30AnosDeTrabalho.toFixed(2)}`)
+            }
+            else{
+                alert("Não identificado!")
+            }
+        }
+    </script>
+</body>
+</html>
