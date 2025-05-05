@@ -6,6 +6,7 @@
     <title>Exercicio037</title>
 </head>
 <body>
+    <h2>Iremos calcular seu aumento, de salário.</h2>
     <input type="number" name="salarioAtual" id="salarioAtual" placeholder="Digite seu salário...">
     <input type="text" name="genero" id="genero" placeholder="Informe seu genêro...">
     <input type="number" name="anosTrabalhados" id="anosTrabalhados" placeholder="anosTrabalhados">
@@ -34,8 +35,7 @@
             }else if(genero == "masculino" &&  anosTrabalhados > 30){
                 let novoSalarioAcimaDe30AnosDeTrabalho = (Number(salarioAtual) * 0.25) + Number(salarioAtual)
                 alert(`Seu novo salário é de R$ ${novoSalarioAcimaDe30AnosDeTrabalho.toFixed(2)}`)
-            }
-            else{
+            }else{
                 alert("Não identificado!")
             }
         }
