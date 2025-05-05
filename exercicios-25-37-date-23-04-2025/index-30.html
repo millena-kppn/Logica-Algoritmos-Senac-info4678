@@ -6,10 +6,26 @@
    <title>Exercicio030</title>
 </head>
 <body>
-   <!-- FAZER ATIVIDADE -->
-    <!-- Copiar exercicio 25 e dar um upgrade -->
+   <input type="number" name="numberOn" id="numberOn">
+   <input type="number" name="numberTwo" id="numberTwo">
+   <input type="number" name="numberThree" id="numberThree">
+   <button onclick="calcular()">Calcular</button>
    <script>
-      "use strict"
+       "use strict"
+   function calcular(){
+       let numberOn = document.getElementById("numberOn").value 
+       let numberTwo = document.getElementById("numberTwo").value
+       let numberTthree = document.getElementById("numberThree").value 
+       if (numberOn < (numberOn + numberTwo) && numberTwo < (numberOn + numberTthree) && numberTthree < (numberTwo + numberTthree)){ 
+       alert("É possivel formar um TRIÂNGULO")
+      }else if(numberOn == numberTwo && numberTwo == numberTthree){
+         alert("Esse triângulo é EQUILATERO")
+      }else if(numberOn == numberTwo || numberTwo == numberTthree || numberOn == numberTthree){
+         alert("Esse triângulo é ISÓSCELOS")
+      }else{
+         alert("Esse triângulo é ESCALENO")
+       }
+   }
    </script>
 </body>
 </html>
