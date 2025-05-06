@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio038</title>
+</head>
+<body>
+    <h1>Use o console!</h1>
+    <script>
+        "use strict"
+        let descreva = ""//string fazia 
+        window.onload = function(){
+            for (let number = 6; number < 12 ; number++ ){//no number há todos os valores numericos calculados num looping que defini
+               descreva = descreva + number + " "//descreva recebe string fazia mais valores mais espaço
+            }
+            console.log(descreva + "Acabou!")//apresento o console.log fora do escopo, pq o looping acontece dentro do escopo
+        }
+    </script>
+</body>
+</html>
