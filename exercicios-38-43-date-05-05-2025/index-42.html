@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio039</title>
+    <title>Exercicio042</title>
 </head>
 <body>
     <h1>Use o console!</h1>
@@ -11,11 +11,14 @@
         "use strict"
         let descreva = ""
         window.onload = function(){
-            for(let number = 10; number > 2; number--){
-                descreva = descreva + number + " "
+            let teste = window.prompt("Digite um valor")
+            let number = 0
+            for(number = teste; teste == number; number ++){
+                descreva = descreva + teste + " "
             }
-            console.log(descreva + "Acabou!")
+            console.log(`${descreva}Acabou!`)
         }
     </script>
+    <!-- TERMINAR EXÉRCICIO -->
 </body>
 </html>

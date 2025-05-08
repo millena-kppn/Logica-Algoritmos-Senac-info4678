@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Exercicio040</title>
 </head>
 <body>
-    
+    <h1>Use o console!</h1>
+    <script>
+        "use strict"
+        let descreva = ""
+        window.onload = function(){
+            for(let number = 0; number < 19; number += 3){
+                descreva = descreva + number + " "
+            }
+            console.log(descreva + "Acabou!")
+        }
+    </script>
 </body>
 </html>
