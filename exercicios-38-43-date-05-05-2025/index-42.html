@@ -8,16 +8,32 @@
 <body>
     <h1>Use o console!</h1>
     <script>
-        "use strict"
-        let descreva = ""
-        window.onload = function(){
-            let teste = window.prompt("Digite um valor")
-            let number = 0
-            for(number = teste; teste == number; number ++){
-                descreva = descreva + teste + " "
-            }
-            console.log(`${descreva}Acabou!`)
-        }
+       function contar() {
+  // Solicita ao usuário que digite um número inteiro e positivo
+  let numero;
+  while (true) {
+    const entrada = prompt("Digite um número inteiro e positivo:");
+    numero = parseInt(entrada);
+
+    if (!isNaN(numero) && Number.isInteger(numero) && numero > 0) {
+      break;
+    } else {
+      alert("Por favor, digite um número inteiro e positivo válido.");
+    }
+  }
+
+  // Inicia a contagem
+  let contagem = "Contagem: ";
+  for (let i = 1; i <= numero; i++) {
+    contagem += i + " ";
+  }
+
+  // Exibe a contagem e a mensagem de finalização
+  alert(contagem + "Acabou!");
+}
+
+// Chama a função para iniciar o processo
+contar();
     </script>
     <!-- TERMINAR EXÉRCICIO -->
 </body>
