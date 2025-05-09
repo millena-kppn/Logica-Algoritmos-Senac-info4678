@@ -7,34 +7,13 @@
 </head>
 <body>
     <h1>Use o console!</h1>
-    <script>
-       function contar() {
-  // Solicita ao usuário que digite um número inteiro e positivo
-  let numero;
-  while (true) {
-    const entrada = prompt("Digite um número inteiro e positivo:");
-    numero = parseInt(entrada);
-
-    if (!isNaN(numero) && Number.isInteger(numero) && numero > 0) {
-      break;
-    } else {
-      alert("Por favor, digite um número inteiro e positivo válido.");
-    }
+<script>
+  let numberEscolhidoPorUsuario = prompt("Digite um valor")
+  let conteudoNaMesmaLinha = ""
+  for(let comparacoa = 1; comparacoa <= numberEscolhidoPorUsuario; comparacoa +=1){
+    conteudoNaMesmaLinha = conteudoNaMesmaLinha + comparacoa + " "
   }
-
-  // Inicia a contagem
-  let contagem = "Contagem: ";
-  for (let i = 1; i <= numero; i++) {
-    contagem += i + " ";
-  }
-
-  // Exibe a contagem e a mensagem de finalização
-  alert(contagem + "Acabou!");
-}
-
-// Chama a função para iniciar o processo
-contar();
-    </script>
-    <!-- TERMINAR EXÉRCICIO -->
+  console.log(`${conteudoNaMesmaLinha}Acabou!`)
+</script>
 </body>
 </html>
