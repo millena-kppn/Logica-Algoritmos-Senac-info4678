@@ -6,16 +6,20 @@
     <title>Exercicio043</title>
 </head>
 <body>
+    <h1>Use o console!</h1>
     <script>
-        "use strict"
-        let conteudoNaMesmaLinha = ""
-        window.onload = function(){
-            for(let number = 1; number < 30; number++){
-                conteudoNaMesmaLinha = conteudoNaMesmaLinha + number + " "
+    "use strict"
+    window.onload = function(){//criação da função 
+    let conteudoNaMesmaLinha = "" // variavel com string vazia = "" = espaço 
+        for (let number = 30; number > 0; number--){ //gera a sequencia de 30 a 1
+            if (number % 4 == 0){//verifica os valores que são divisiveis por 4 
+                conteudoNaMesmaLinha = conteudoNaMesmaLinha + "["+ number + "]" + " "//coloca [] colchetes nos valores divisiveis 
+            }else{//se não for divisivel por 4 recebe a linha de baixo
+                conteudoNaMesmaLinha = conteudoNaMesmaLinha + number + " " //espaço + valor + espaço
             }
-            console.log(`${conteudoNaMesmaLinha}`)
         }
-        //TERMINAR ATIVIDADE 
+        console.log(conteudoNaMesmaLinha)//com todas os valores determinados no escopo de FOR ele "soma" e trás o resultado final 
+    }
     </script>
 </body>
 </html>
