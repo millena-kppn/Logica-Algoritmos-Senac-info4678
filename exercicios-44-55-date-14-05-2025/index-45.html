@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio045</title>
+</head>
+
+<body>
+   <script>
+      "use strict"
+      // Solicita os dados ao usuário
+      let inicio = parseInt(prompt("Digite o primeiro valor:"));
+      let fim = parseInt(prompt("Digite o último valor:"));
+      let incremento = parseInt(prompt("Digite o incremento:"));
+
+      // Verifica se o incremento é válido
+      if (incremento <= 0) {
+         console.log("O incremento deve ser maior que zero.");
+      } else {
+         let contagem = "Contagem: ";
+
+         // Contagem crescente
+         if (inicio < fim) {
+            for (let i = inicio; i <= fim; i += incremento) {
+               contagem += i + " ";
+            }
+         }
+         // Contagem decrescente
+         else {
+            for (let i = inicio; i >= fim; i -= incremento) {
+               contagem += i + " ";
+            }
+         }
+
+         contagem += "Acabou!";
+         console.log(contagem);
+      }
+   </script>
+
+</body>
+
+</html>
