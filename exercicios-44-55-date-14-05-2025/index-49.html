@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio049</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      let sorteados = [];
+      let acimaDe5 = 0;
+      let divisiveisPor3 = 0;
+      //sorteando 20 números entre 0 e 10
+      for (let i = 0; i < 20; i++) {
+         let numero = Math.floor(Math.random() * 11); //entre 0 e 10 
+         sorteados.push(numero);
+         if (numero > 5) {
+            acimaDe5++;
+         }
+         if (numero % 3 === 0) {
+            divisiveisPor3++;
+         }
+      }
+      //mostrando os resultados
+      alert("Números sorteados: " + sorteados.join(", "));//join = serve para adicionar a virgula 
+      alert("Quantidade de números acima de 5: " + acimaDe5);
+      alert("Quantidade de números divisíveis por 3: " + divisiveisPor3);
+   </script>
+</body>
+</html>

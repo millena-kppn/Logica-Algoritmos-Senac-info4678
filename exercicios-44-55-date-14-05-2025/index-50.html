@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio050</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      let maior = -Infinity; //para garantir que qualquer número digitado será maior
+      let menor = Infinity; //para garantir que qualquer número digitado será menor
+      for (let i = 1; i <= 8; i++) {
+         let preco = parseFloat(prompt(`Digite o preço do ${i}º produto:`));
+         if (preco > maior) {
+            maior = preco;
+         }
+         if (preco < menor) {
+            menor = preco;
+         }
+      }
+      alert("Maior preço digitado: R$ " + maior.toFixed(2));
+      alert("Menor preço digitado: R$ " + menor.toFixed(2));
+   </script>
+</body>
+</html>

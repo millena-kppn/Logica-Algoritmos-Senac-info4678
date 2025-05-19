@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio055</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      //sorteia um número entre 1 e 10
+      let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+      let tentativas = 4;
+      let acertou = false;
+      for (let i = 1; i <= 4; i++) {
+         let palpite = parseInt(prompt(`Tentativa ${i} de 4: Digite um número entre 1 e 10:`), 10);
+         if (palpite === numeroSecreto) {
+            alert(`🎉 Parabéns! Você acertou o número secreto (${numeroSecreto}) na tentativa ${i}.`);
+            acertou = true;
+            break;//ele interrompe o loop e o programa continua a execução a partir da linha seguinte ao loop
+         } else {
+            alert(`❌ Errado! Você ainda tem ${4 - i} tentativa(s).`);
+         }
+      }
+      if (!acertou) {
+         alert(`💀 Fim de jogo! O número secreto era ${numeroSecreto}.`);
+      }
+   </script>
+</body>
+</html>

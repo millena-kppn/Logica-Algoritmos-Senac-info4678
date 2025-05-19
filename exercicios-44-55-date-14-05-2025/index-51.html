@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio051</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      let somaIdades = 0;
+      let maisDe18 = 0;
+      let menosDe5 = 0;
+      let maiorIdade = 0;
+      for (let i = 1; i <= 10; i++) {
+         let idade = parseInt(prompt(`Digite a idade da ${i} pessoa:`), 10);
+         somaIdades += idade;
+         if (idade > 18) {
+            maisDe18++;
+         }
+         if (idade < 5) {
+            menosDe5++;
+         }
+         if (idade > maiorIdade) {
+            maiorIdade = idade;
+         }
+      }
+      let media = somaIdades / 10;
+      alert("Média de idade do grupo: " + media.toFixed(1));
+      alert("Pessoas com mais de 18 anos: " + maisDe18);
+      alert("Pessoas com menos de 5 anos: " + menosDe5);
+      alert("Maior idade lida: " + maiorIdade);
+   </script>
+</body>
+</html>
