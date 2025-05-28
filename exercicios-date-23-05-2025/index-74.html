@@ -10,13 +10,13 @@
     <script>
         "use strict"
         window.onload = function(){
-            var arrayDeNumeros = []
+            var arrayDeNumeros = [5,3]
             var numeroDeRepeticoes = 2
-            // novo for
+            var arrayRepetido = []
             for(var i = 0; i < numeroDeRepeticoes; i ++){
-                arrayDeNumeros.push(valor)
-            }
-            console.log(arrayDeNumeros)
+                  arrayRepetido = arrayDeNumeros.concat(arrayDeNumeros).concat(arrayDeNumeros).concat(arrayDeNumeros).concat(arrayDeNumeros);//o CONCAT é uma forma de concatenação serve para unir ou combinar dois ou mais elementos
+                }
+            console.log(arrayRepetido)
         }
     </script>
 </body>
