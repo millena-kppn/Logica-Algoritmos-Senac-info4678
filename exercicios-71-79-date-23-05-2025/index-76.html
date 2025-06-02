@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio076</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      function gerarNumerosAleatorios() {
+         const vetorNumeros = []; // criando um vetor vazio
+         for (let i = 0; i < 7; i++) {
+            vetorNumeros.push(Math.floor(Math.random() * 100) + 1); // gera números entre 1 e 100
+         }
+         return vetorNumeros;
+      }
+      const meusNumerosAleatorios = gerarNumerosAleatorios();
+      console.log("Os números gerados aleatoriamente são:");
+      console.log(meusNumerosAleatorios);
+   </script>
+</body>
+</html>

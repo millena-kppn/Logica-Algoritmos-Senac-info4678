@@ -9,10 +9,17 @@
     <h1>Use o Console!</h1>
     <script>
         "use strict"
-        window.onload = function(){
-            let fibonacci = new Array(15)
-            console.log(fibonacci)
+        function preencherFibonacci() {
+            const fibonacciVetor = new Array(15); // criando um vetor com 15 posições
+            fibonacciVetor[0] = 1;// os dois primeiros elementos da sequência de Fibonacci são 1 e 1
+            fibonacciVetor[1] = 1;
+            for (let i = 2; i < 15; i++) {
+                fibonacciVetor[i] = fibonacciVetor[i - 1] + fibonacciVetor[i - 2];
+            }
+            return fibonacciVetor;
         }
+        const meuVetorFibonacci = preencherFibonacci();// chamando a função e armazena o vetor preenchido
+        console.log(meuVetorFibonacci);
     </script>
 </body>
 </html>

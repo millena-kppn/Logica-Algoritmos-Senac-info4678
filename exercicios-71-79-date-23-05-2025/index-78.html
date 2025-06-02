@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio078</title>
+</head>
+<body>
+   <script>
+      "use strict"
+      function analisarMultiplosDeDez() {
+         const numeros = []; // criando um vetor vazio para armazenar os 15 números
+         const posicoesMultiplosDeDez = []; // vetor para guardar as posições dos múltiplos de 10
+         console.log("Por favor, digite 15 números:");
+         // Loop para ler os 15 números
+         for (let i = 0; i < 15; i++) {
+            let numeroStr;
+            let numero;
+            do {
+               numeroStr = prompt(`Digite o ${i + 1} número:`);
+               numero = parseInt(numeroStr); // converte a string para um número inteiro
+               if (isNaN(numero)) {
+                  alert("Entrada inválida. Por favor, digite um número.");
+               }
+            } while (isNaN(numero)); // continua pedindo até que um número válido seja digitado
+            numeros.push(numero); // adiciona o número ao vetor
+            if (numero % 10 === 0) {
+               posicoesMultiplosDeDez.push(i); // guarda a posição (índice)
+            }
+         }
+         console.log("Vetor Completo");
+         console.log(numeros);
+         console.log("Posições dos Múltiplos de 10");
+         if (posicoesMultiplosDeDez.length > 0) {
+            const posicoesVisiveis = posicoesMultiplosDeDez.map(pos => pos + 1); // adiciona 1 ao índice para mostrar a posição "humana" (começando do 1)
+            console.log(`Os múltiplos de 10 foram digitados nas posições: ${posicoesVisiveis.join(', ')}.`);
+         } else {
+            console.log("Nenhum múltiplo de 10 foi digitado.");
+         }
+      }
+      analisarMultiplosDeDez();
+   </script>
+</body>
+</html>

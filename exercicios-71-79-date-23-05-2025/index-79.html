@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercicio079</title>
+</head>
+<body>
+   <script>
+      //situação de desição -- (do while = ENQUANTO FAÇA)
+      "use strict"
+      function encontrarNumerosPares() {
+  const numeros = []; // Vetor para armazenar os 10 números
+  const paresEncontrados = []; // Vetor para armazenar objetos {numero: valor, posicao: indice} dos pares
+  console.log("Por favor, digite 10 números inteiros:");
+  for (let i = 0; i < 10; i++) {
+    let entradaUsuario;
+    let numero;
+    do {
+      entradaUsuario = prompt(`Digite o ${i + 1}º número inteiro:`);
+      numero = parseInt(entradaUsuario);
+      if (isNaN(numero) || !Number.isInteger(parseFloat(entradaUsuario))) {// verifica se a entrada é um número e se é um número inteiro
+        alert("Entrada inválida. Por favor, digite um número inteiro.");
+      }
+    } while (isNaN(numero) || !Number.isInteger(parseFloat(entradaUsuario)));
+    numeros.push(numero); // adicionando o número ao vetor
+    if (numero % 2 === 0) {// verificando se o número é par
+      paresEncontrados.push({
+        valor: numero,
+        posicao: i
+      });
+    }
+  }
+  console.log("Vetor Completo");
+  console.log(numeros);
+  console.log("Números Pares e Suas Posições");
+  if (paresEncontrados.length > 0) {
+    paresEncontrados.forEach(item => {
+      // Adiciona 1 à posição para mostrar a posição "humana" (começando do 1)
+      console.log(`Número: ${item.valor}, Posição (índice): ${item.posicao}, Posição (humana): ${item.posicao + 1}`);
+    });
+  } else {
+    console.log("Nenhum número par foi digitado.");
+  }
+}
+encontrarNumerosPares();//chama a função para executar o programa
+   </script>
+</body>
+</html>
